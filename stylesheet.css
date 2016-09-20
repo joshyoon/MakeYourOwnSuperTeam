@@ -2,7 +2,7 @@ form {
     display: inline-block;
 }
 
-#buttonOne {
+#button1 {
     display: inline-block;
     height:20px;
 	width:70px;
@@ -15,7 +15,7 @@ form {
 	margin-top:2px;
 }
 
-#buttonTwo {
+#button2 {
     display: inline-block;
     height:20px;
 	width:70px;
@@ -27,7 +27,7 @@ form {
 	text-align:center;
 	margin-top:2px;
 }
-#buttonThree {
+#button3 {
     display: inline-block;
     height:20px;
 	width:70px;
@@ -39,7 +39,7 @@ form {
 	text-align:center;
 	margin-top:2px;
 }
-#buttonFour {
+#button4 {
     display: inline-block;
     height:20px;
 	width:70px;
@@ -51,7 +51,7 @@ form {
 	text-align:center;
 	margin-top:2px;
 }
-#buttonFive {
+#button5 {
     display: inline-block;
     height:20px;
 	width:70px;

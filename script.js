@@ -1,31 +1,3 @@
-$(document).ready(function() {
-    $("#buttonOne").click(function() {
-        var toAdd = $('input[name=checkListItem1]').val();
-    $(".playerOne").append('<div class="item">' + toAdd + '</div>');     
-    });
-    
-    $("#buttonTwo").click(function() {
-        var toAdd = $('input[name=checkListItem2]').val();
-    $(".playerTwo").append('<div class="item">' + toAdd + '</div>');     
-    });
-    
-    $("#buttonThree").click(function() {
-        var toAdd = $('input[name=checkListItem3]').val();
-    $(".playerThree").append('<div class="item">' + toAdd + '</div>');     
-    });
-    
-    $("#buttonFour").click(function() {
-        var toAdd = $('input[name=checkListItem4]').val();
-    $(".playerFour").append('<div class="item">' + toAdd + '</div>');     
-    });
-    
-    $("#buttonFive").click(function() {
-        var toAdd = $('input[name=checkListItem5]').val();
-    $(".playerFive").append('<div class="item">' + toAdd + '</div>');     
-    });
-
- });
-
 function nbaPlayer(name, value, offRating, defRating) {
 	this.name= name;
 	this.userInput= name.toLowerCase();
@@ -88,4 +60,92 @@ var zachR = new nbaPlayer("Zach Randolph", 2, 107.6, 108.4);
 var jonasV = new nbaPlayer("Jonas Valanciunas", 2, 120.7, 103.5);
 var nikolaV = new nbaPlayer("Nikola Vucevic", 2, 106.7, 104.5);
 var kembaW = new nbaPlayer("Kemba Walker", 2, 111.5, 104.7);
+
+var playerArray=[lebronJ,lamarcusA, demarcusC, anthonyD, blakeG, jamesH, chrisP,kawhiL,russellW,carmeloA,demarD, jimmyB,paulM,damianL,kyrieI
+,paulG,hassanW,johnW,andreD,karlA,giannisA,ericB,chrisB,derrickF,alH,marcG,dwightH,sergeI,deandreJ,kevinL,kyleL,
+dirkN,isaiahT,dwyaneW,andrewW,bradleyB,mikeC,tyrekeE,kennethF,pauG,rudyG,gordonH,brookL,cjM,khrisM,chandlerP,kristapsP, jonasV, zachR,nikolaV,kembaW];
+
+
+$(document).ready(function() {
+    $("#button1").click(function() {
+        var toAdd = $('input[name=checkListItem1]').val();
+	var playerSorter = function (array) {
+    	for (var i=0; i<array.length; i++) {
+    		if (array[i].userInput=== toAdd.toLowerCase()) {
+    			$(".player1").append('<div class="item1">' + array[i].name + '</div>');
+    			$(".value1").append('<div class="item1">' + array[i].value + '</div>');
+    			$(".offRating1").append('<div class="item1">' + array[i].offRating + '</div>');
+    			$(".defRating1").append('<div class="item1">' + array[i].defRating + '</div>'); 
+    		};
+    	};
+    };
+	playerSorter(playerArray);
+    });  
+
+	$("#button2").click(function() {
+        var toAdd = $('input[name=checkListItem2]').val();
+	var playerSorter = function (array) {
+    	for (var i=0; i<array.length; i++) {
+    		if (array[i].userInput=== toAdd.toLowerCase()) {
+    			$(".player2").append('<div class="item2">' + array[i].name + '</div>'); 
+    			$(".value2").append('<div class="item2">' + array[i].value + '</div>');
+    			$(".offRating2").append('<div class="item2">' + array[i].offRating + '</div>');
+    			$(".defRating2").append('<div class="item2">' + array[i].defRating + '</div>'); 
+    		};
+    	};
+    };
+	playerSorter(playerArray);
+    }); 
+
+	$("#button3").click(function() {
+        var toAdd = $('input[name=checkListItem3]').val();
+	var playerSorter = function (array) {
+    	for (var i=0; i<array.length; i++) {
+    		if (array[i].userInput=== toAdd.toLowerCase()) {
+    			$(".player3").append('<div class="item3">' + array[i].name + '</div>'); 
+    			$(".value3").append('<div class="item3">' + array[i].value + '</div>');
+    			$(".offRating3").append('<div class="item3">' + array[i].offRating + '</div>');
+    			$(".defRating3").append('<div class="item3">' + array[i].defRating + '</div>'); 
+    		};
+    	};
+    };
+	playerSorter(playerArray);
+    });   
+
+	$("#button4").click(function() {
+        var toAdd = $('input[name=checkListItem4]').val();
+	var playerSorter = function (array) {
+    	for (var i=0; i<array.length; i++) {
+    		if (array[i].userInput=== toAdd.toLowerCase()) {
+    			$(".player4").append('<div class="item4">' + array[i].name + '</div>'); 
+    			$(".value4").append('<div class="item4">' + array[i].value + '</div>');
+    			$(".offRating4").append('<div class="item4">' + array[i].offRating + '</div>');
+    			$(".defRating4").append('<div class="item4">' + array[i].defRating + '</div>'); 
+    		};
+    	};
+    };
+	playerSorter(playerArray);
+    });   
+
+	$("#button5").click(function() {
+        var toAdd = $('input[name=checkListItem5]').val();
+
+	var playerSorter = function (array) {
+    	for (var i=0; i<array.length; i++) {
+    		if (array[i].userInput=== toAdd.toLowerCase()) {
+    			$(".player5").append('<div class="item5">' + array[i].name + '</div>'); 
+    			$(".value5").append('<div class="item5">' + array[i].value + '</div>');
+    			$(".offRating5").append('<div class="item5">' + array[i].offRating + '</div>');
+    			$(".defRating5").append('<div class="item5">' + array[i].defRating + '</div>'); 
+    		};
+    	};
+    };
+	playerSorter(playerArray);
+   
+    }); 
+
+ });
+
+
+
 
