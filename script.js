@@ -1,7 +1,7 @@
 function nbaPlayer(name, value, offRating, defRating) {
 	this.name= name;
 	this.userInput= name.toLowerCase();
-	this.value= "$" + value;
+	this.value= value;
 	this.offRating= offRating;
 	this.defRating= defRating;
 };
@@ -53,7 +53,7 @@ var rudyG = new nbaPlayer("Rudy Gobert", 2, 112.5, 97.1);
 var gordonH = new nbaPlayer("Gordon Hayward", 2, 110.3, 105.6);
 var brookL = new nbaPlayer("Brook Lopez", 2, 109.3, 107.9);
 var cjM = new nbaPlayer("C.J. McCollum", 2, 107.8, 109.5);
-var khrisM= new nbaPlayer("Chris Bosh", 2, 109.1, 109.2);
+var khrisM= new nbaPlayer("Khris Middleton", 2, 109.1, 109.2);
 var chandlerP = new nbaPlayer("Chandler Parsons", 2, 109.9, 107.4);
 var kristapsP = new nbaPlayer("Kristaps Porzingis", 2, 103.0, 103.6);
 var zachR = new nbaPlayer("Zach Randolph", 2, 107.6, 108.4);
@@ -65,6 +65,15 @@ var playerArray=[lebronJ,lamarcusA, demarcusC, anthonyD, blakeG, jamesH, chrisP,
 ,paulG,hassanW,johnW,andreD,karlA,giannisA,ericB,chrisB,derrickF,alH,marcG,dwightH,sergeI,deandreJ,kevinL,kyleL,
 dirkN,isaiahT,dwyaneW,andrewW,bradleyB,mikeC,tyrekeE,kennethF,pauG,rudyG,gordonH,brookL,cjM,khrisM,chandlerP,kristapsP, jonasV, zachR,nikolaV,kembaW];
 
+var valueArray = [];
+
+var valueAdder= function(array) {
+		var totalValue= 0
+		for (var i=0; i<array.length; i++) {
+			totalValue += (array[i]);
+		}
+		return(totalValue);
+	};
 
 $(document).ready(function() {
     $("#button1").click(function() {
@@ -72,10 +81,15 @@ $(document).ready(function() {
 	var playerSorter = function (array) {
     	for (var i=0; i<array.length; i++) {
     		if (array[i].userInput=== toAdd.toLowerCase()) {
-    			$(".player1").append('<div class="item1">' + array[i].name + '</div>');
-    			$(".value1").append('<div class="item1">' + array[i].value + '</div>');
+    			$(".form1").replaceWith('<div class="item1">' + array[i].name + '</div>');
+    			$(".value1").append('<div class="item1">' + "$"+ array[i].value + '</div>');
     			$(".offRating1").append('<div class="item1">' + array[i].offRating + '</div>');
-    			$(".defRating1").append('<div class="item1">' + array[i].defRating + '</div>'); 
+    			$(".defRating1").append('<div class="item1">' + array[i].defRating + '</div>');
+    			valueArray.push(array[i].value); 
+    			var sum=valueAdder(valueArray);
+    			$(".teamTotalRemove").remove();
+    			$(".teamTotal").append('<div class="teamTotalRemove">' + "Total:" +sum + '</div>');
+
     		};
     	};
     };
@@ -87,13 +101,18 @@ $(document).ready(function() {
 	var playerSorter = function (array) {
     	for (var i=0; i<array.length; i++) {
     		if (array[i].userInput=== toAdd.toLowerCase()) {
-    			$(".player2").append('<div class="item2">' + array[i].name + '</div>'); 
-    			$(".value2").append('<div class="item2">' + array[i].value + '</div>');
+    			$(".form2").replaceWith('<div class="item2">' + array[i].name + '</div>');
+    			$(".value2").append('<div class="item2">' +"$"+ array[i].value + '</div>');
     			$(".offRating2").append('<div class="item2">' + array[i].offRating + '</div>');
     			$(".defRating2").append('<div class="item2">' + array[i].defRating + '</div>'); 
+    			valueArray.push(array[i].value)
+    			var sum=valueAdder(valueArray);
+    			$(".teamTotalRemove").remove();
+    			$(".teamTotal").append('<div class="teamTotalRemove">' + "Total:" +sum + '</div>');
     		};
     	};
     };
+
 	playerSorter(playerArray);
     }); 
 
@@ -102,10 +121,15 @@ $(document).ready(function() {
 	var playerSorter = function (array) {
     	for (var i=0; i<array.length; i++) {
     		if (array[i].userInput=== toAdd.toLowerCase()) {
-    			$(".player3").append('<div class="item3">' + array[i].name + '</div>'); 
-    			$(".value3").append('<div class="item3">' + array[i].value + '</div>');
+    			$(".form3").replaceWith('<div class="item3">' + array[i].name + '</div>');
+    			$(".value3").append('<div class="item3">' +"$"+ array[i].value + '</div>');
     			$(".offRating3").append('<div class="item3">' + array[i].offRating + '</div>');
     			$(".defRating3").append('<div class="item3">' + array[i].defRating + '</div>'); 
+    			valueArray.push(array[i].value)
+    			var sum=valueAdder(valueArray);
+    			$(".teamTotalRemove").remove();
+    			$(".teamTotal").append('<div class="teamTotalRemove">' + "Total:" +sum + '</div>');
+
     		};
     	};
     };
@@ -117,10 +141,15 @@ $(document).ready(function() {
 	var playerSorter = function (array) {
     	for (var i=0; i<array.length; i++) {
     		if (array[i].userInput=== toAdd.toLowerCase()) {
-    			$(".player4").append('<div class="item4">' + array[i].name + '</div>'); 
-    			$(".value4").append('<div class="item4">' + array[i].value + '</div>');
+    			$(".form4").replaceWith('<div class="item4">' + array[i].name + '</div>');
+    			$(".value4").append('<div class="item4">' +"$"+ array[i].value + '</div>');
     			$(".offRating4").append('<div class="item4">' + array[i].offRating + '</div>');
     			$(".defRating4").append('<div class="item4">' + array[i].defRating + '</div>'); 
+    			valueArray.push(array[i].value)
+    			var sum=valueAdder(valueArray);
+    			$(".teamTotalRemove").remove();
+    			$(".teamTotal").append('<div class="teamTotalRemove">' + "Total:" +sum + '</div>');
+
     		};
     	};
     };
@@ -133,18 +162,26 @@ $(document).ready(function() {
 	var playerSorter = function (array) {
     	for (var i=0; i<array.length; i++) {
     		if (array[i].userInput=== toAdd.toLowerCase()) {
-    			$(".player5").append('<div class="item5">' + array[i].name + '</div>'); 
-    			$(".value5").append('<div class="item5">' + array[i].value + '</div>');
+    			$(".form5").replaceWith('<div class="item5">' + array[i].name + '</div>');
+    			$(".value5").append('<div class="item5">' +"$"+ array[i].value + '</div>');
     			$(".offRating5").append('<div class="item5">' + array[i].offRating + '</div>');
     			$(".defRating5").append('<div class="item5">' + array[i].defRating + '</div>'); 
+    			valueArray.push(array[i].value)
+    			var sum=valueAdder(valueArray);
+    			$(".teamTotalRemove").remove();
+    			$(".teamTotal").append('<div class="teamTotalRemove">' + "Total:" +sum + '</div>');
+
     		};
     	};
     };
 	playerSorter(playerArray);
-   
-    }); 
+	});
+   	
 
- });
+
+
+});
+
 
 
 
