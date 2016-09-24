@@ -76,59 +76,73 @@ var valueAdder= function(array) {
 	};
 
 $(document).ready(function() {
-    $("#button1").click(function() {
+    $("#addButton1").click(function() {
         var toAdd = $('input[name=checkListItem1]').val();
 	var playerSorter = function (array) {
     	for (var i=0; i<array.length; i++) {
     		if (array[i].userInput=== toAdd.toLowerCase()) {
     			$(".form1").replaceWith('<div class="item1">' + array[i].name + '</div>');
+    			$("#addButton1").css("background-color","#80ffaa")
     			$(".value1").append('<div class="item1">' + "$"+ array[i].value + '</div>');
     			$(".offRating1").append('<div class="item1">' + array[i].offRating + '</div>');
     			$(".defRating1").append('<div class="item1">' + array[i].defRating + '</div>');
     			valueArray.push(array[i].value); 
     			var sum=valueAdder(valueArray);
     			$(".teamTotalRemove").remove();
-    			$(".teamTotal").append('<div class="teamTotalRemove">' + "Total:" +sum + '</div>');
+    			$(".teamTotal").append('<div class="teamTotalRemove">' + "Total:$" +sum + '</div>');
 
     		};
     	};
     };
 	playerSorter(playerArray);
-    });  
+	
+    });
+    $("#removeButton1").click(function() {
+		$(".form1").replaceWith('<div class="item1">' + array[i].name + '</div>');
+    	$(".value1").remove('<div class="item1">' + "$"+ array[i].value + '</div>');
+    	$(".offRating1").remove('<div class="item1">' + array[i].offRating + '</div>');
+    	$(".defRating1").remove('<div class="item1">' + array[i].defRating + '</div>');
+    	valueArray.push(array[i].value); 
+    	var sum=valueAdder(valueArray);
+    	$(".teamTotalRemove").remove();
+    	$(".teamTotal").append('<div class="teamTotalRemove">' + "Total:$" +sum + '</div>');
+    });
+	
 
-	$("#button2").click(function() {
+	$("#addButton2").click(function() {
         var toAdd = $('input[name=checkListItem2]').val();
 	var playerSorter = function (array) {
     	for (var i=0; i<array.length; i++) {
     		if (array[i].userInput=== toAdd.toLowerCase()) {
     			$(".form2").replaceWith('<div class="item2">' + array[i].name + '</div>');
+    			$("#addButton2").css("background-color","#80ffaa")
     			$(".value2").append('<div class="item2">' +"$"+ array[i].value + '</div>');
     			$(".offRating2").append('<div class="item2">' + array[i].offRating + '</div>');
     			$(".defRating2").append('<div class="item2">' + array[i].defRating + '</div>'); 
     			valueArray.push(array[i].value)
     			var sum=valueAdder(valueArray);
     			$(".teamTotalRemove").remove();
-    			$(".teamTotal").append('<div class="teamTotalRemove">' + "Total:" +sum + '</div>');
+    			$(".teamTotal").append('<div class="teamTotalRemove">' + "Total:$" +sum + '</div>');
     		};
     	};
     };
-
 	playerSorter(playerArray);
     }); 
 
-	$("#button3").click(function() {
+	$("#addButton3").click(function() {
         var toAdd = $('input[name=checkListItem3]').val();
 	var playerSorter = function (array) {
     	for (var i=0; i<array.length; i++) {
     		if (array[i].userInput=== toAdd.toLowerCase()) {
     			$(".form3").replaceWith('<div class="item3">' + array[i].name + '</div>');
+    			$("#addButton3").css("background-color","#80ffaa")
     			$(".value3").append('<div class="item3">' +"$"+ array[i].value + '</div>');
     			$(".offRating3").append('<div class="item3">' + array[i].offRating + '</div>');
     			$(".defRating3").append('<div class="item3">' + array[i].defRating + '</div>'); 
     			valueArray.push(array[i].value)
     			var sum=valueAdder(valueArray);
     			$(".teamTotalRemove").remove();
-    			$(".teamTotal").append('<div class="teamTotalRemove">' + "Total:" +sum + '</div>');
+    			$(".teamTotal").append('<div class="teamTotalRemove">' + "Total:$" +sum + '</div>');
 
     		};
     	};
@@ -136,19 +150,20 @@ $(document).ready(function() {
 	playerSorter(playerArray);
     });   
 
-	$("#button4").click(function() {
+	$("#addButton4").click(function() {
         var toAdd = $('input[name=checkListItem4]').val();
 	var playerSorter = function (array) {
     	for (var i=0; i<array.length; i++) {
     		if (array[i].userInput=== toAdd.toLowerCase()) {
     			$(".form4").replaceWith('<div class="item4">' + array[i].name + '</div>');
+    			$("#addButton4").css("background-color","#80ffaa")
     			$(".value4").append('<div class="item4">' +"$"+ array[i].value + '</div>');
     			$(".offRating4").append('<div class="item4">' + array[i].offRating + '</div>');
     			$(".defRating4").append('<div class="item4">' + array[i].defRating + '</div>'); 
     			valueArray.push(array[i].value)
     			var sum=valueAdder(valueArray);
     			$(".teamTotalRemove").remove();
-    			$(".teamTotal").append('<div class="teamTotalRemove">' + "Total:" +sum + '</div>');
+    			$(".teamTotal").append('<div class="teamTotalRemove">' + "Total:$" +sum + '</div>');
 
     		};
     	};
@@ -156,20 +171,21 @@ $(document).ready(function() {
 	playerSorter(playerArray);
     });   
 
-	$("#button5").click(function() {
+	$("#addButton5").click(function() {
         var toAdd = $('input[name=checkListItem5]').val();
 
 	var playerSorter = function (array) {
     	for (var i=0; i<array.length; i++) {
     		if (array[i].userInput=== toAdd.toLowerCase()) {
     			$(".form5").replaceWith('<div class="item5">' + array[i].name + '</div>');
+    			$("#addButton5").css("background-color","#80ffaa")
     			$(".value5").append('<div class="item5">' +"$"+ array[i].value + '</div>');
     			$(".offRating5").append('<div class="item5">' + array[i].offRating + '</div>');
     			$(".defRating5").append('<div class="item5">' + array[i].defRating + '</div>'); 
     			valueArray.push(array[i].value)
     			var sum=valueAdder(valueArray);
     			$(".teamTotalRemove").remove();
-    			$(".teamTotal").append('<div class="teamTotalRemove">' + "Total:" +sum + '</div>');
+    			$(".teamTotal").append('<div class="teamTotalRemove">' + "Total:$" +sum + '</div>');
 
     		};
     	};
