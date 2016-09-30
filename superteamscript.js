@@ -86,12 +86,22 @@ var zachR = new nbaPlayer("Zach Randolph", 2, 107.6, 108.4);
 var jonasV = new nbaPlayer("Jonas Valanciunas", 2, 120.7, 103.5);
 var nikolaV = new nbaPlayer("Nikola Vucevic", 2, 106.7, 104.5);
 var kembaW = new nbaPlayer("Kemba Walker", 2, 111.5, 104.7);
+var stephenC = new nbaPlayer("Stephen Curry", "N/A", 124.7, 102.0);
+var klayT = new nbaPlayer("Klay Thompson", "N/A", 112.2, 106.9);
+var andreI = new nbaPlayer("Andre Iguodala", "N/A", 114.6, 104.1);
+var kevinD = new nbaPlayer("Kevin Durant", "N/A", 121.7, 103.3);
+var draymondG = new nbaPlayer("Draymond Green", "N/A", 114.7, 99.4);
+
 
 var playerArray=[
 	lebronJ,lamarcusA, demarcusC, anthonyD, blakeG, jamesH, chrisP,kawhiL,russellW,carmeloA,demarD, jimmyB,paulM,damianL,kyrieI
 	,paulG,hassanW,johnW,andreD,karlA,giannisA,ericB,chrisB,derrickF,alH,marcG,dwightH,sergeI,deandreJ,kevinL,kyleL,
 	dirkN,isaiahT,dwyaneW,andrewW,bradleyB,mikeC,tyrekeE,kennethF,pauG,rudyG,gordonH,brookL,cjM,khrisM,chandlerP,kristapsP, jonasV, zachR,nikolaV,kembaW
-	];
+];
+
+var warriorsArray=[
+	stephenC, klayT, andreI, kevinD, draymondG
+];
 
 var userTeamArray = [];
 var nameArray=[];
