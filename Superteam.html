@@ -1,11 +1,17 @@
 <html>
     <head>
         <title>Build Your Own Super Team!</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" href="superteamstylesheet.css"/>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
         <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.0/themes/smoothness/jquery-ui.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.js"></script>
         <script type="text/javascript" src="superteamscript.js"></script>
+            <div id="dialog" title="Over Budget!">
+        <p>Looks like your team is over $15 budget. Please stay under the fantasy salary cap!</p>
+    </div>  
+
     </head>
     
     <body>
@@ -111,7 +117,15 @@
                     </td>
                     <td style="padding:5px;border-left:1px solid black;"></td>
                     <td style="padding:5px;border-left:1px solid black;"></td>
-                    <td style="padding:5px;border-left:1px solid black;"><div class="teamTotal"></div></td>      
+                    <td style="padding:5px;border-left:1px solid black;"><div class="teamTotal">Total:</div></td>      
+                    
+                </tr>
+                <tr>
+                    <td>
+                    </td>
+                    <td style="padding:5px;border-left:1px solid black;"></td>
+                    <td style="padding:5px;border-left:1px solid black;"></td>
+                    <td style="padding:5px;border-left:1px solid black;"><div id="submitButton">Submit!</div></div></td>      
                     
                 </tr>
             
@@ -138,9 +152,9 @@
                     <td style="padding:5px;">Stephen Curry</td>
                     <td style="padding:5px;border-left:1px solid black;">124.7</td>
                     <td style="padding:5px;border-left:1px solid black;">102.0</td>      
-                 </tr>
+                </tr>
                 
-                                <tr>
+                <tr>
                     <td style="padding:5px;">Klay Thompson</td>
                     <td style="padding:5px;border-left:1px solid black;">112.2</td>
                     <td style="padding:5px;border-left:1px solid black;">106.9</td>      
@@ -163,10 +177,10 @@
                     <td style="padding:5px;border-left:1px solid black;">114.7</td>
                     <td style="padding:5px;border-left:1px solid black;">99.4</td>      
                 </tr>
-                
-
-            </tbody>
+ 
+              </tbody>
         </table>
+
 
     </body>
 

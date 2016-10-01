@@ -128,7 +128,7 @@ $(document).ready(function() {
 	    			userTeamArray.splice(0,0,array[i]); 
 	    			var sum=valueAdder(userTeamArray);
 	    			$(".teamTotalRemove").remove();
-	    			$(".teamTotal").append('<div class="teamTotalRemove">' + "Total:$" +sum + '</div>');
+	    			$(".teamTotal").append('<div class="teamTotalRemove">' + "$" +sum + '</div>');
 	    		};
 	    	};
 	    };
@@ -140,7 +140,7 @@ $(document).on("click", "#removeButton1", function() {
 	userTeamArray.splice(0,1);
 	var sum=valueAdder(userTeamArray);
 	$(".teamTotalRemove").remove();
-	$(".teamTotal").append('<div class="teamTotalRemove">' + "Total:$" +sum + '</div>');
+	$(".teamTotal").append('<div class="teamTotalRemove">' + "$" +sum + '</div>');
 	$("#removeButton1").replaceWith('<div id="addButton1">Add</div>');
 	$(".value1").empty();
 	$(".offRating1").empty();
@@ -162,20 +162,19 @@ $(document).ready(function() {
 	    			userTeamArray.splice(1,0,array[i]); 
 	    			var sum=valueAdder(userTeamArray);
 	    			$(".teamTotalRemove").remove();
-	    			$(".teamTotal").append('<div class="teamTotalRemove">' + "Total:$" +sum + '</div>');
+	    			$(".teamTotal").append('<div class="teamTotalRemove">' + "$" +sum + '</div>');
 	    			if (sum>15) {
-	    				alert("Your team is over the budget of $15!")
+					    $( "#dialog" ).dialog();
+	    				// alert("Your team is over the budget of $15!")
 	    				userTeamArray.splice(1,1);
 						var sum=valueAdder(userTeamArray);
 	    				$(".teamTotalRemove").remove();
-						$(".teamTotal").append('<div class="teamTotalRemove">' + "Total:$" +sum + '</div>');
+						$(".teamTotal").append('<div class="teamTotalRemove">' + "$" +sum + '</div>');
 						$("#removeButton2").replaceWith('<div id="addButton2">Add</div>');
 						$(".value2").empty();
 						$(".offRating2").empty();
 						$(".defRating2").empty();
 						$(".item2a").replaceWith('<div class="form2"><form name="checkListForm"><input type="text" name="checkListItem2"/></form></div>');
-
-
 	    			};
 	    		};
 	    	};
@@ -188,7 +187,7 @@ $(document).on("click", "#removeButton2", function() {
 	userTeamArray.splice(1,1);
 	var sum=valueAdder(userTeamArray);
 	$(".teamTotalRemove").remove();
-	$(".teamTotal").append('<div class="teamTotalRemove">' + "Total:$" +sum + '</div>');
+	$(".teamTotal").append('<div class="teamTotalRemove">' + "$" +sum + '</div>');
 	$("#removeButton2").replaceWith('<div id="addButton2">Add</div>');
 	$(".value2").empty();
 	$(".offRating2").empty();
@@ -210,7 +209,7 @@ $(document).ready(function() {
 	    			userTeamArray.splice(2,0,array[i]); 
 	    			var sum=valueAdder(userTeamArray);
 	    			$(".teamTotalRemove").remove();
-	    			$(".teamTotal").append('<div class="teamTotalRemove">' + "Total:$" +sum + '</div>');
+	    			$(".teamTotal").append('<div class="teamTotalRemove">' + "$" +sum + '</div>');
 	    		};
 	    	};
 	    };
@@ -222,7 +221,7 @@ $(document).on("click", "#removeButton3", function() {
 	userTeamArray.splice(2,1);
 	var sum=valueAdder(userTeamArray);
 	$(".teamTotalRemove").remove();
-	$(".teamTotal").append('<div class="teamTotalRemove">' + "Total:$" +sum + '</div>');
+	$(".teamTotal").append('<div class="teamTotalRemove">' + "$" +sum + '</div>');
 	$("#removeButton3").replaceWith('<div id="addButton3">Add</div>');
 	$(".value3").empty();
 	$(".offRating3").empty();
@@ -244,7 +243,7 @@ $(document).ready(function() {
 	    			userTeamArray.splice(3,0,array[i]); 
 	    			var sum=valueAdder(userTeamArray);
 	    			$(".teamTotalRemove").remove();
-	    			$(".teamTotal").append('<div class="teamTotalRemove">' + "Total:$" +sum + '</div>');
+	    			$(".teamTotal").append('<div class="teamTotalRemove">' + "$" +sum + '</div>');
 	    		};
 	    	};
 	    };
@@ -256,7 +255,7 @@ $(document).on("click", "#removeButton4", function() {
 	userTeamArray.splice(3,1);
 	var sum=valueAdder(userTeamArray);
 	$(".teamTotalRemove").remove();
-	$(".teamTotal").append('<div class="teamTotalRemove">' + "Total:$" +sum + '</div>');
+	$(".teamTotal").append('<div class="teamTotalRemove">' + "$" +sum + '</div>');
 	$("#removeButton4").replaceWith('<div id="addButton4">Add</div>');
 	$(".value4").empty();
 	$(".offRating4").empty();
@@ -278,7 +277,7 @@ $(document).ready(function() {
 	    			userTeamArray.splice(4,0,array[i]); 
 	    			var sum=valueAdder(userTeamArray);
 	    			$(".teamTotalRemove").remove();
-	    			$(".teamTotal").append('<div class="teamTotalRemove">' + "Total:$" +sum + '</div>');
+	    			$(".teamTotal").append('<div class="teamTotalRemove">' + "$" +sum + '</div>');
 	    		};
 	    	};
 	    };
@@ -290,7 +289,7 @@ $(document).on("click", "#removeButton5", function() {
 	userTeamArray.splice(4,1);
 	var sum=valueAdder(userTeamArray);
 	$(".teamTotalRemove").remove();
-	$(".teamTotal").append('<div class="teamTotalRemove">' + "Total:$" +sum + '</div>');
+	$(".teamTotal").append('<div class="teamTotalRemove">' + "$" +sum + '</div>');
 	$("#removeButton5").replaceWith('<div id="addButton5">Add</div>');
 	$(".value5").empty();
 	$(".offRating5").empty();

@@ -131,3 +131,20 @@ form {
 	text-align:center;
 	margin-top:1px;
 }
+
+#submitButton {
+	display: inline-block;
+    height:20px;
+	width:75px;
+	background-color:#00b33c;
+	font-family:arial;
+	font-weight:bold;
+	color:#ffffff;
+	border-radius: 5px;
+	text-align:center;
+	margin-top:1px;
+}
+
+/*#dialog {
+	visibility: hidden;
+}*/
